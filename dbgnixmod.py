@@ -234,7 +234,7 @@ def main():
                 lines = [line.strip() for line in fh]
             for line in lines:
                 line = line.strip()
-                if line.startswith("#"):
+                if line.startswith("#") or line == "":
                     continue
                 print(">>>", end="", sep="")
                 child.sendline(line)
